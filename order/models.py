@@ -13,9 +13,10 @@ class Menu(models.Model):
 class Order(models.Model):
     shop = models.ForeignKey(Shop,on_delete=models.CASCADE)
     order_date = models.DateTimeField('date ordered')
+    address = models.CharField(max_length=40)
     estimated_time = models.IntegerField(default=-1)
     deliver_finish = models.BooleanField(default=0)
-    address = models.CharField(max_length=40)
+    
     
     
 class Orderfood(models.Model):
