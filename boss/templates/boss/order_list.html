@@ -1,0 +1,5 @@
+<form method = "post" action="{% url 'timeinput' %}">
+    <input type ="number" name="estimagedtime">
+    <input type ='hidden' nmae ="order_id" value="{{order.id}}">
+    <input type ="submit" value="예상시간 입력">
+</form>

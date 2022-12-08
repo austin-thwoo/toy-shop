@@ -63,7 +63,7 @@ def order(request):
             
         
         
-        return HttpResponse(status=200)
+        return render(request, 'order/success.html')
     elif request.method=='GET':
         order_list = Order.objects.all()
         return render(request, 'order/order_list.html', {'order_list':order_list})
